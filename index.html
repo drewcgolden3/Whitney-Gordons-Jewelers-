@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitney Gordon's Jewelers — Downtown Hingham Since 1950</title>
+<meta name="description" content="A family-owned jeweler in downtown Hingham Square since 1950. Fine jewelry, custom design, watch and jewelry repair, and engraving — with the personal service only a local jeweler can give.">
+<link rel="canonical" href="https://whitneygordons.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Whitney Gordon's Jewelers — Downtown Hingham Since 1950">
+<meta property="og:description" content="A family-owned Hingham jeweler since 1950. Fine jewelry, custom design, expert repair, and engraving.">
+<meta property="og:url" content="https://whitneygordons.com/">
+<meta property="og:image" content="images/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  "name": "Whitney Gordon's Jewelers",
+  "description": "Family-owned jeweler in downtown Hingham since 1950. Fine jewelry, custom design, watch and jewelry repair, and engraving.",
+  "url": "https://whitneygordons.com/",
+  "telephone": "+1-781-749-0690",
+  "email": "whitneygordonsjewelers@gmail.com",
+  "foundingDate": "1950",
+  "image": "https://whitneygordons.com/images/hero.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "39 Main Street",
+    "addressLocality": "Hingham",
+    "addressRegion": "MA",
+    "postalCode": "02043",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 42.241465, "longitude": -70.888736 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "64" },
+  "sameAs": [
+    "https://www.instagram.com/whitneygordonsjewelers/",
+    "https://www.facebook.com/Whitney-Gordons-Jewelers-142034569184370"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#16201C;          /* deep pine — jewel-box velvet */
+    --ink-soft:#22302A;
+    --bone:#F7F3EA;         /* warm ivory */
+    --bone-2:#EFE8D9;       /* deeper cream for alternating bands */
+    --gold:#A8854E;         /* aged gold — hairlines & marks */
+    --gold-bright:#C2A063;
+    --garnet:#6E2A2A;       /* one jewel accent */
+    --stone:#6E665A;        /* muted warm text */
+    --line:rgba(168,133,78,.34);
+
+    --serif:"Cormorant Garamond", Georgia, serif;
+    --sans:"Mulish", -apple-system, system-ui, sans-serif;
+
+    --wrap:1180px;
+    --gut:clamp(20px,5vw,64px);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--bone);
+    line-height:1.65;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  /* ---- gold lozenge divider ---- */
+  .rule{display:flex;align-items:center;gap:14px;justify-content:center}
+  .rule .ln{height:1px;width:min(90px,12vw);background:var(--line)}
+  .rule .gem{width:9px;height:9px;border:1px solid var(--gold);transform:rotate(45deg)}
+  .rule--left{justify-content:flex-start}
+  .rule--left .ln:first-child{display:none}
+
+  /* ======================= TOP BAR ======================= */
+  .utility{
+    background:var(--ink);
+    color:var(--bone);
+    font-size:.74rem;
+    letter-spacing:.04em;
+  }
+  .utility .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:9px;padding-bottom:9px}
+  .utility a{color:var(--bone);opacity:.85;transition:opacity .2s}
+  .utility a:hover{opacity:1;color:var(--gold-bright)}
+  .utility .u-left,.utility .u-right{display:flex;gap:22px;align-items:center}
+  .utility .u-right span{color:var(--gold-bright);opacity:.9}
+  @media (max-width:760px){
+    .utility .u-left .hide-sm{display:none}
+    .utility .wrap{justify-content:center}
+    .utility .u-right{display:none}
+  }
+
+  /* ======================= NAV ======================= */
+  header.nav{
+    position:sticky;top:0;z-index:60;
+    background:rgba(247,243,234,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    transition:box-shadow .3s;
+  }
+  header.nav.scrolled{box-shadow:0 10px 30px -22px rgba(22,32,28,.55)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px;gap:20px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mark{width:40px;height:40px;flex:none}
+  .brand .wordmark{line-height:1.05}
+  .brand .wordmark b{
+    display:block;font-family:var(--serif);font-weight:500;
+    font-size:1.32rem;letter-spacing:.02em;color:var(--ink);
+  }
+  .brand .wordmark small{
+    display:block;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-top:1px;
+  }
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{
+    font-size:.82rem;letter-spacing:.06em;color:var(--ink);font-weight:500;
+    position:relative;padding:4px 0;transition:color .2s;
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--gold);transition:width .28s ease;
+  }
+  .nav-links a:hover{color:var(--gold)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{
+    font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.05em;
+    border:1px solid var(--ink);color:var(--ink);padding:9px 18px;border-radius:1px;
+    transition:background .25s,color .25s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--bone)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px}
+  .nav-toggle span{display:block;width:24px;height:1.5px;background:var(--ink);margin:5px 0;transition:.3s}
+  @media (max-width:920px){
+    .nav-links,.nav-cta{display:none}
+    .nav-toggle{display:block}
+    .nav.open .nav-links{
+      display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+      background:var(--bone);border-bottom:1px solid var(--line);padding:8px 0;
+    }
+    .nav.open .nav-links a{padding:13px var(--gut)}
+    .nav.open .nav-cta{display:block;margin:10px var(--gut) 16px;text-align:center}
+    .nav.open .nav-links{}
+  }
+
+  /* ======================= HERO ======================= */
+  /* ======================= HERO — pinned scrub ======================= */
+  .hero-scroll{position:relative;height:230vh;background:var(--ink);padding:0}
+  .hero-stage{position:sticky;top:0;height:100vh;overflow:hidden;color:var(--bone)}
+
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;background-color:var(--ink);
+    background-image:
+      linear-gradient(180deg, rgba(18,26,23,.42) 0%, rgba(18,26,23,.52) 45%, rgba(18,26,23,.72) 100%),
+      url("images/hero.jpg");
+    background-size:cover;background-position:center 38%;
+    transform-origin:center;will-change:transform;
+  }
+  .hero-scrim{
+    position:absolute;inset:0;z-index:1;opacity:0;pointer-events:none;will-change:opacity;
+    background:
+      radial-gradient(120% 95% at 50% 32%, transparent 28%, rgba(11,16,14,.65) 100%),
+      linear-gradient(180deg, rgba(11,16,14,.15), rgba(11,16,14,.8));
+  }
+
+  /* depth planes: a warm atmosphere layer + an engraved foreground frame */
+  .hero-glow{
+    position:absolute;inset:-12%;z-index:2;pointer-events:none;opacity:.9;will-change:transform;
+    background:
+      radial-gradient(42% 38% at 74% 20%, rgba(194,160,99,.32), transparent 62%),
+      radial-gradient(52% 48% at 22% 84%, rgba(110,42,42,.20), transparent 66%);
+  }
+  .hero-frame{
+    position:absolute;z-index:6;pointer-events:none;will-change:transform;
+    inset:clamp(16px,2.6vw,42px);
+    border:1px solid rgba(168,133,78,.45);
+    box-shadow:inset 0 0 0 4px rgba(247,243,234,.045);
+  }
+
+  .hero-inner{
+    position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;padding:120px var(--gut) 60px;
+  }
+  .hero-copy{max-width:860px;will-change:transform,opacity}
+  .hero-copy .eyebrow{color:var(--gold-bright)}
+  .hero-copy h1{
+    font-family:var(--serif);font-weight:300;font-size:clamp(2.7rem,6.4vw,5.1rem);
+    line-height:1.04;letter-spacing:.005em;margin:.42em 0 .5em;
+  }
+  .hero-copy h1 em{font-style:italic;color:var(--gold-bright);font-weight:400}
+  .hero-copy .lede{
+    font-size:clamp(1.02rem,1.7vw,1.22rem);max-width:46ch;margin:0 auto;
+    color:rgba(247,243,234,.9);font-weight:300;line-height:1.7;
+  }
+  .hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px;justify-content:center}
+
+  .hero-hint{
+    position:absolute;left:50%;bottom:86px;z-index:4;transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:9px;pointer-events:none;
+    font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(247,243,234,.72);
+  }
+  .hero-hint .ln{width:1px;height:36px;background:linear-gradient(var(--gold-bright),transparent);
+    animation:hintpulse 2.2s ease-in-out infinite}
+  @keyframes hintpulse{0%,100%{opacity:.3;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+
+  .hero-trust{
+    position:absolute;left:0;right:0;bottom:0;z-index:5;opacity:0;
+    border-top:1px solid rgba(168,133,78,.28);
+    background:rgba(13,19,17,.55);backdrop-filter:blur(3px);will-change:transform,opacity;
+  }
+
+  @media (max-width:600px){ .hero-scroll{height:200vh} .hero-hint{bottom:98px} }
+  @media (prefers-reduced-motion:reduce){
+    .hero-scroll{height:auto}
+    .hero-stage{position:static;height:auto}
+    .hero-inner{position:static;min-height:84vh}
+    .hero-glow{opacity:.7}
+    .hero-scrim{opacity:.5}
+    .hero-trust{position:static;opacity:1}
+    .hero-hint{display:none}
+  }
+  .btn{
+    font-family:var(--sans);font-weight:600;font-size:.86rem;letter-spacing:.06em;
+    padding:14px 28px;border-radius:1px;cursor:pointer;transition:.25s;display:inline-flex;align-items:center;gap:9px;
+  }
+  .btn-gold{background:var(--gold);color:var(--ink);border:1px solid var(--gold)}
+  .btn-gold:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
+  .btn-ghost{background:transparent;color:var(--bone);border:1px solid rgba(247,243,234,.5)}
+  .btn-ghost:hover{border-color:var(--bone);background:rgba(247,243,234,.07)}
+
+  .hero-trust .wrap{display:flex;flex-wrap:wrap;gap:8px 44px;justify-content:center;padding-top:18px;padding-bottom:18px}
+  .trust-item{display:flex;align-items:center;gap:10px;font-size:.82rem;letter-spacing:.04em;color:rgba(247,243,234,.92)}
+  .trust-item .stars{color:var(--gold-bright);letter-spacing:1px;font-size:.8rem}
+  .trust-item b{color:var(--gold-bright);font-weight:600}
+
+  /* ======================= SECTION SHELL ======================= */
+  section{padding:clamp(64px,9vw,118px) 0}
+  .sec-head{max-width:640px}
+  .sec-head.center{margin:0 auto;text-align:center}
+  .sec-head h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(2rem,4.2vw,3.15rem);line-height:1.1;margin:.4em 0 .35em;letter-spacing:.005em;
+  }
+  .sec-head p{color:var(--stone);font-size:1.04rem;font-weight:300;max-width:54ch}
+  .sec-head.center p{margin-inline:auto}
+
+  /* ======================= STORY ======================= */
+  .story{background:var(--bone)}
+  .story-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(34px,6vw,82px);align-items:center}
+  .story-copy p{margin-bottom:1.1em;color:#33403a;font-weight:300;font-size:1.06rem;line-height:1.78}
+  .story-copy p:last-child{margin-bottom:0}
+  .story-copy .sig{
+    font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--ink);margin-top:.6em;
+  }
+  .story-copy .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+  .story-frame{position:relative}
+  .story-frame .frame{aspect-ratio:4/5}
+  .story-frame .est-badge{
+    position:absolute;bottom:-26px;left:-26px;width:118px;height:118px;
+    background:var(--ink);color:var(--bone);border-radius:50%;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    border:1px solid var(--gold);box-shadow:0 24px 50px -24px rgba(22,32,28,.7);
+  }
+  .est-badge .yrs{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--gold-bright)}
+  .est-badge small{font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;margin-top:5px;opacity:.85}
+  @media (max-width:840px){
+    .story-grid{grid-template-columns:1fr;gap:48px}
+    .story-frame{order:-1;max-width:420px}
+    .story-frame .est-badge{left:auto;right:-12px;bottom:-22px;width:98px;height:98px}
+    .est-badge .yrs{font-size:1.95rem}
+  }
+
+  /* ---- image frame / placeholder ---- */
+  .frame{
+    position:relative;overflow:hidden;background:var(--ink-soft);
+    background-image:
+      radial-gradient(130% 100% at 30% 20%, rgba(168,133,78,.16), transparent 60%),
+      linear-gradient(135deg,#283631 0%,#1c2823 100%);
+    border:1px solid rgba(168,133,78,.2);
+  }
+  .frame img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+  .frame[data-label]::before{
+    content:attr(data-label);
+    position:absolute;inset:0;z-index:1;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    padding:18px;color:rgba(247,243,234,.5);
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.9;
+  }
+  .frame.has-img::before{display:none}
+
+  /* ======================= COLLECTIONS ======================= */
+  .collections{background:var(--bone-2)}
+  .col-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,30px);margin-top:54px;
+  }
+  .card{
+    background:var(--bone);border:1px solid var(--line);
+    display:flex;flex-direction:column;overflow:hidden;
+    transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 26px 46px -30px rgba(22,32,28,.55)}
+  .card .frame{aspect-ratio:5/4;border:0;border-bottom:1px solid var(--line)}
+  .card .card-body{padding:22px 24px 26px}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:1.42rem;letter-spacing:.01em}
+  .card .num{font-size:.66rem;letter-spacing:.28em;color:var(--gold);font-weight:600;display:block;margin-bottom:6px}
+  .card p{color:var(--stone);font-size:.92rem;font-weight:300;margin-top:7px;line-height:1.6}
+  @media (max-width:880px){.col-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.col-grid{grid-template-columns:1fr}}
+
+  /* ======================= HERITAGE BAND ======================= */
+  .heritage{background:var(--ink);color:var(--bone);position:relative;overflow:hidden}
+  .heritage::before{
+    content:"75+";position:absolute;right:clamp(-30px,2vw,40px);top:50%;transform:translateY(-50%);
+    font-family:var(--serif);font-size:clamp(14rem,34vw,32rem);line-height:1;color:rgba(168,133,78,.07);
+    pointer-events:none;font-weight:500;
+  }
+  .heritage .wrap{position:relative;z-index:2}
+  .heritage .sec-head h2{color:var(--bone)}
+  .heritage .sec-head p{color:rgba(247,243,234,.78)}
+  .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:56px}
+  .perk{border-top:1px solid rgba(168,133,78,.35);padding-top:22px}
+  .perk h4{font-family:var(--serif);font-weight:500;font-size:1.45rem;color:var(--gold-bright);margin-bottom:8px}
+  .perk p{color:rgba(247,243,234,.78);font-size:.94rem;font-weight:300;line-height:1.65}
+  @media (max-width:760px){.perks{grid-template-columns:1fr;gap:28px}}
+
+  /* ======================= BRANDS ======================= */
+  .brands{background:var(--bone);text-align:center}
+  .brand-row{
+    display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 48px;margin-top:46px;
+  }
+  .brand-row span{
+    font-family:var(--serif);font-size:clamp(1.15rem,2.3vw,1.7rem);color:var(--ink);
+    opacity:.62;transition:opacity .25s,color .25s;letter-spacing:.02em;
+  }
+  .brand-row span:hover{opacity:1;color:var(--garnet)}
+
+  /* ======================= FEATURED QUOTE ======================= */
+  .feature{background:var(--ink);color:var(--bone);position:relative;overflow:hidden;text-align:center}
+  .feature::before{content:"\201C";position:absolute;top:-.18em;left:50%;transform:translateX(-50%);
+    font-family:var(--serif);font-weight:600;font-size:clamp(15rem,30vw,30rem);line-height:1;
+    color:rgba(168,133,78,.10);pointer-events:none}
+  .feature .wrap{position:relative;z-index:2;max-width:940px}
+  .feature .stars{color:var(--gold-bright);letter-spacing:6px;font-size:clamp(1rem,2vw,1.25rem);margin-bottom:26px}
+  .feature blockquote{font-family:var(--serif);font-weight:300;font-style:italic;
+    font-size:clamp(1.6rem,3.8vw,2.85rem);line-height:1.3;letter-spacing:.005em;color:var(--bone)}
+  .feature .who{margin-top:30px;font-size:.76rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-bright);font-weight:600}
+  .feature .who span{display:block;color:rgba(247,243,234,.55);font-weight:400;letter-spacing:.04em;text-transform:none;margin-top:9px;font-size:.82rem}
+
+  /* ======================= REVIEWS ======================= */
+  .reviews{background:var(--bone-2)}
+  .rev-head{text-align:center;max-width:700px;margin:0 auto}
+  .rev-bignum{font-family:var(--serif);font-weight:500;font-size:clamp(3.6rem,8vw,5.8rem);line-height:1;color:var(--ink)}
+  .rev-bigstars{color:var(--gold);letter-spacing:6px;font-size:clamp(1.1rem,2.2vw,1.5rem);margin:6px 0 12px}
+  .rev-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.6rem);margin:.1em 0 .35em;line-height:1.12}
+  .rev-head .rev-sub{color:var(--stone);font-size:.96rem;letter-spacing:.04em}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,28px);margin-top:54px}
+  .quote{
+    background:var(--bone);border:1px solid var(--line);padding:30px 28px 26px;display:flex;flex-direction:column;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;
+  }
+  .quote:hover{transform:translateY(-5px);box-shadow:0 22px 40px -28px rgba(22,32,28,.5)}
+  .quote .stars{color:var(--gold);letter-spacing:2px;font-size:.84rem;margin-bottom:14px}
+  .quote p{font-family:var(--serif);font-size:1.16rem;font-weight:400;line-height:1.5;color:#2a352f;font-style:italic;flex:1}
+  .quote .who{margin-top:20px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .quote .who span{color:var(--stone);font-weight:400;text-transform:none;letter-spacing:.02em}
+  .rev-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 14px;margin-top:50px}
+  .rev-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:2px;
+    padding:11px 18px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:600;background:var(--bone)}
+  .rev-badge b{color:var(--gold);font-weight:700}
+  .rev-cta{text-align:center;margin-top:40px}
+  @media (max-width:880px){.rev-grid{grid-template-columns:1fr}}
+
+  /* ======================= VISIT ======================= */
+  .visit{background:var(--bone)}
+  .visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,5vw,70px);align-items:stretch}
+  .visit-info dl{margin-top:30px}
+  .visit-info .row{padding:20px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:18px}
+  .visit-info .row:last-child{border-bottom:1px solid var(--line)}
+  .visit-info dt{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:3px}
+  .visit-info dd{color:var(--ink);font-size:1.02rem;line-height:1.7;font-weight:300}
+  .visit-info dd a{border-bottom:1px solid var(--line);transition:color .2s,border-color .2s}
+  .visit-info dd a:hover{color:var(--garnet);border-color:var(--garnet)}
+  .visit-info .closed{color:var(--stone);font-size:.9rem}
+  .visit-map{min-height:420px;border:1px solid var(--line);overflow:hidden}
+  .visit-map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.25) contrast(.95)}
+  .visit-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .btn-ink{background:var(--ink);color:var(--bone);border:1px solid var(--ink)}
+  .btn-ink:hover{background:var(--ink-soft)}
+  .btn-line{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn-line:hover{background:var(--ink);color:var(--bone)}
+  @media (max-width:840px){.visit-grid{grid-template-columns:1fr}.visit-map{order:-1}}
+
+  /* ======================= FOOTER ======================= */
+  footer{background:var(--ink);color:rgba(247,243,234,.7);padding:64px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start}
+  .foot-brand .wordmark b{font-family:var(--serif);font-size:1.45rem;color:var(--bone);display:block;font-weight:500}
+  .foot-brand .wordmark small{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-top:3px}
+  .foot-brand p{margin-top:18px;font-size:.9rem;font-weight:300;max-width:34ch;line-height:1.7}
+  footer h5{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:10px}
+  footer ul a{font-size:.92rem;font-weight:300;transition:color .2s}
+  footer ul a:hover{color:var(--gold-bright)}
+  .foot-social{display:flex;gap:14px;margin-top:6px}
+  .foot-social a{width:38px;height:38px;border:1px solid rgba(168,133,78,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.25s}
+  .foot-social a:hover{background:var(--gold);border-color:var(--gold)}
+  .foot-social a:hover svg{fill:var(--ink)}
+  .foot-social svg{width:17px;height:17px;fill:var(--bone)}
+  .foot-bottom{margin-top:50px;padding-top:24px;border-top:1px solid rgba(168,133,78,.22);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.78rem;letter-spacing:.03em}
+  @media (max-width:760px){.foot-grid{grid-template-columns:1fr;gap:36px}}
+
+  /* ======================= THEN & NOW (pinned crossfade) ======================= */
+  .thennow{position:relative;height:180vh;background:var(--ink);color:var(--bone);padding:0}
+  .tn-pin{position:sticky;top:0;height:100vh;display:flex;align-items:center;overflow:hidden}
+  .tn-pin .wrap{width:100%}
+  .thennow .eyebrow{color:var(--gold-bright)}
+  .thennow .sec-head h2{color:var(--bone);margin-bottom:0}
+  .tn-stage{position:relative;width:min(840px,90vw,84vh);aspect-ratio:4/3;margin:26px auto 0;overflow:hidden;
+    border:1px solid rgba(168,133,78,.42);box-shadow:0 44px 90px -46px rgba(0,0,0,.75)}
+  .tn-img{position:absolute;inset:0;background-size:cover;background-position:center;will-change:transform,opacity}
+  .tn-old{background-image:url("images/thennow-1980s.jpg")}
+  .tn-new{background-image:url("images/thennow-today.jpg");opacity:0}
+  .tn-label{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;align-items:center;gap:16px;
+    padding:22px 24px 18px;background:linear-gradient(0deg, rgba(11,16,14,.82), transparent)}
+  .tn-year{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.85rem);color:var(--gold-bright);line-height:1;white-space:nowrap;transition:opacity .2s}
+  .tn-track{position:relative;flex:1;height:1px;background:rgba(247,243,234,.28)}
+  .tn-dot{position:absolute;top:50%;left:0;width:10px;height:10px;border:1px solid var(--gold);background:var(--ink);transform:translate(-50%,-50%) rotate(45deg)}
+  .tn-cap{text-align:center;max-width:58ch;margin:22px auto 0;color:rgba(247,243,234,.8);font-weight:300;font-size:1rem;line-height:1.65}
+  @media (prefers-reduced-motion:reduce){
+    .thennow{height:auto}
+    .tn-pin{position:static;height:auto;padding:clamp(64px,9vw,118px) 0}
+    .tn-new{opacity:1}.tn-img{transform:none !important}
+  }
+
+  /* ======================= REVEAL ======================= */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ===== UTILITY BAR ===== -->
+<div class="utility">
+  <div class="wrap">
+    <div class="u-left">
+      <a href="tel:+17817490690">781·749·0690</a>
+      <a class="hide-sm" href="https://maps.google.com/?q=39+Main+Street+Hingham+MA+02043" target="_blank" rel="noopener">39 Main Street, Hingham</a>
+    </div>
+    <div class="u-right">
+      <span>Tue–Fri 9–5:30 · Sat 9–5</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Whitney Gordon's Jewelers home">
+      <!-- Hallmark monogram -->
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <ellipse cx="24" cy="24" rx="22" ry="22" stroke="#A8854E" stroke-width="1"/>
+        <ellipse cx="24" cy="24" rx="18" ry="18" stroke="#A8854E" stroke-width=".5" opacity=".6"/>
+        <text x="24" y="27" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="15" font-weight="600" fill="#16201C" letter-spacing="-.5">WG</text>
+        <text x="24" y="40" text-anchor="middle" font-family="Mulish, sans-serif" font-size="3.4" letter-spacing="1.5" fill="#A8854E">EST. 1950</text>
+      </svg>
+      <span class="wordmark">
+        <b>Whitney Gordon's</b>
+        <small>Jewelers · Hingham</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Our Story</a>
+      <a href="#collections">Collections</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="nav-cta" href="tel:+17817490690">Call the shop</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero-scroll" id="top">
+  <div class="hero-stage">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
+    <div class="hero-scrim" id="heroScrim"></div>
+
+    <div class="hero-inner">
+      <div class="hero-copy" id="heroCopy">
+        <span class="eyebrow">Downtown Hingham · Since 1950</span>
+        <h1>Your hometown jeweler for <em>over seventy-five years.</em></h1>
+        <p class="lede">Fine jewelry, custom design, and expert repair from a family that has known Hingham Square for three generations — with the personal service only a local jeweler can give.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="tel:+17817490690">Call 781·749·0690</a>
+          <a class="btn btn-ghost" href="#visit">Plan your visit</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-frame" id="heroFrame" aria-hidden="true"></div>
+
+    <div class="hero-hint" id="heroHint" aria-hidden="true"><span>Scroll</span><span class="ln"></span></div>
+
+    <div class="hero-trust" id="heroTrust">
+      <div class="wrap">
+        <div class="trust-item"><span class="stars">★★★★★</span> <b>5.0</b> across 64 Google reviews</div>
+        <div class="trust-item">BBB <b>A+</b> Accredited since 1993</div>
+        <div class="trust-item">Family-owned · <b>Est. 1950</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-copy reveal">
+        <span class="eyebrow">Our Story</span>
+        <div class="rule rule--left" style="margin:18px 0 26px"><span class="ln"></span><span class="gem"></span><span class="ln"></span></div>
+        <p>Whitney Gordon's has stood in downtown Hingham since 1950 — one of the South Shore's last truly independent, family-run jewelers. For more than forty years it has been owned by Michael and Lorraine Campbell, who still greet most customers by name.</p>
+        <p>Whether you're marking an engagement, adding to a collection, or simply saying <em>"I'm thinking of you,"</em> we take a personal interest in every visit. A fine selection of diamond and precious-stone jewelry, sterling, gold, and watches — and repairs, resizing, and engraving handled with care, most of it right here in the shop.</p>
+        <p class="sig">Nice things come in small packages.<small>Michael &amp; Lorraine Campbell · Owners</small></p>
+      </div>
+      <div class="story-frame reveal">
+        <div class="frame" data-label="Photo — Michael &amp; Lorraine in the shop  (images/owners.jpg)">
+          <img src="images/owners.jpg" alt="Michael and Lorraine Campbell, owners of Whitney Gordon's Jewelers" loading="lazy">
+        </div>
+        <div class="est-badge"><span class="yrs">75+</span><small>Years in Hingham</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THEN & NOW ===== -->
+<section class="thennow" id="thennow">
+  <div class="tn-pin">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="eyebrow">Then &amp; Now</span>
+        <h2>The same corner since 1950</h2>
+      </div>
+      <div class="tn-stage">
+        <div class="tn-img tn-old" id="tnOld"></div>
+        <div class="tn-img tn-new" id="tnNew"></div>
+        <div class="tn-label" aria-hidden="true">
+          <span class="tn-year" id="tnYearOld">1980s</span>
+          <div class="tn-track"><div class="tn-dot" id="tnDot"></div></div>
+          <span class="tn-year" id="tnYearNew" style="opacity:.4">Today</span>
+        </div>
+      </div>
+      <p class="tn-cap">Forty years apart, the same storefront in Hingham Square. The sign changed; the welcome didn't.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COLLECTIONS ===== -->
+<section class="collections" id="collections">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">The Collection</span>
+      <h2>For every moment worth marking</h2>
+      <p>From the ring you'll wear forever to the small gift that says exactly the right thing — chosen and cared for by people who know jewelry.</p>
+    </div>
+    <div class="col-grid">
+      <article class="card reveal">
+        <div class="frame" data-label="Engagement &amp; wedding rings  (images/rings.jpg)"><img src="images/rings.jpg" alt="Engagement and wedding rings" loading="lazy"></div>
+        <div class="card-body"><span class="num">01</span><h3>Rings</h3><p>Engagements, weddings, anniversaries, and the milestones in between.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="frame" data-label="Necklaces &amp; pendants  (images/necklaces.jpg)"><img src="images/necklaces.jpg" alt="Diamond and gold necklaces" loading="lazy"></div>
+        <div class="card-body"><span class="num">02</span><h3>Necklaces</h3><p>Special occasions call for special gifts — and we have what you need.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="frame" data-label="Earrings  (images/earrings.jpg)"><img src="images/earrings.jpg" alt="Gold and gemstone earrings" loading="lazy"></div>
+        <div class="card-body"><span class="num">03</span><h3>Earrings</h3><p>Something sweet, something elegant, or just something for fun.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="frame" data-label="Citizen &amp; Eco-Drive watches  (images/watches.jpg)"><img src="images/watches.jpg" alt="Citizen Eco-Drive watches" loading="lazy"></div>
+        <div class="card-body"><span class="num">04</span><h3>Watches</h3><p>Citizen Eco-Drive and more — sales, batteries, bands, and service.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="frame" data-label="Pearls, charms &amp; birthstones  (images/pearls.jpg)"><img src="images/pearls.jpg" alt="Imperial pearls and Rembrandt charms" loading="lazy"></div>
+        <div class="card-body"><span class="num">05</span><h3>Pearls &amp; Charms</h3><p>Imperial pearls, Rembrandt charms, and birthstones for every month.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="frame" data-label="Cape Cod &amp; enameled jewelry  (images/capecod.jpg)"><img src="images/capecod.jpg" alt="Cape Cod and enameled jewelry" loading="lazy"></div>
+        <div class="card-body"><span class="num">06</span><h3>Local Favorites</h3><p>Cape Cod jewelry and Marathon sterling enamel — New England classics.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED QUOTE ===== -->
+<section class="feature">
+  <div class="wrap reveal">
+    <div class="stars">★★★★★</div>
+    <blockquote>For anyone who hesitates to shop a local jeweler because they think they can't afford it — you can. Great people, great service, and great ideas for life's moments.</blockquote>
+    <div class="who">Stephen F.<span>One of 64 five-star Google reviews</span></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="story" id="services" style="background:var(--bone)">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-frame reveal">
+        <div class="frame" data-label="Repair bench — loupe, watch, hands at work  (images/repair.jpg)" style="aspect-ratio:4/5">
+          <img src="images/repair.jpg" alt="Jewelry and watch repair at the bench" loading="lazy">
+        </div>
+      </div>
+      <div class="story-copy reveal">
+        <span class="eyebrow">Repair · Custom · Engraving</span>
+        <div class="rule rule--left" style="margin:18px 0 26px"><span class="ln"></span><span class="gem"></span><span class="ln"></span></div>
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;margin-bottom:.5em">A full-service jeweler, not just a counter</h2>
+        <p>We repair and service most watches — batteries, bands, resizing — and bring heirloom and everyday pieces back to life: stone replacement, remounting, bead re-stringing, polishing, and engraving.</p>
+        <p>Have something new in mind? Bring in a few inspiration photos and we'll design a custom piece with you, from sketch to finished ring. If we can't do it in-house, we know someone who can.</p>
+        <p class="sig" style="font-size:1.1rem">Free ring cleaning &amp; inspection — always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HERITAGE / PERKS ===== -->
+<section class="heritage">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why shop a local jeweler</span>
+      <h2>The kind of place where they remember your name</h2>
+      <p>For anyone who's hesitated to shop local thinking they can't afford it — you can. Great prices, world-class pieces, and a relationship that lasts longer than the purchase.</p>
+    </div>
+    <div class="perks">
+      <div class="perk reveal"><h4>20% off your birthday week</h4><p>Treat yourself — most in-stock items are 20% off during the week of your birthday.</p></div>
+      <div class="perk reveal"><h4>10% for MA teachers</h4><p>A standing 10% discount on all in-stock items for Massachusetts teachers.</p></div>
+      <div class="perk reveal"><h4>The gift list</h4><p>See something you love? We'll note it and hold the idea for whoever's shopping for you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BRANDS ===== -->
+<section class="brands">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Brands We Carry</span>
+      <h2>Collections we're proud to stock</h2>
+    </div>
+    <div class="brand-row reveal">
+      <span>Citizen</span><span>Imperial Pearl</span><span>Rembrandt Charms</span><span>Nicole Barr</span><span>Ostbye</span><span>Quality Gold</span><span>Color Merchants</span><span>Marathon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <span class="eyebrow">In Their Words</span>
+      <div class="rev-bignum">5.0</div>
+      <div class="rev-bigstars">★★★★★</div>
+      <h2>Sixty-four reviews. Not one below five stars.</h2>
+      <p class="rev-sub">Three generations of Hingham have trusted the Campbells with their most important moments — here's why.</p>
+    </div>
+
+    <div class="rev-grid">
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>My fiancé brought in a few inspiration photos and they designed the ring of my dreams. We couldn't be happier with Lori.</p>
+        <figcaption class="who">Ashley P. · <span>Google review</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>Great service and real knowledge — they took care of my watch right away. I'm recommending them to my whole family.</p>
+        <figcaption class="who">James F. · <span>Google review</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>I lost a custom wedding ring I'd had for years. They tracked down a replacement in three days, at a fair price — and saved me a trip into Boston.</p>
+        <figcaption class="who">A. M. · <span>Google review</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>A real gem of a shop. I've brought my repairs here for years — always impressed by the care for each piece and the quick turnaround.</p>
+        <figcaption class="who">Yelp reviewer · <span>Hingham, MA</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>My family has been coming here for years. The owners are so sweet and knowledgeable, and always get done exactly what you need.</p>
+        <figcaption class="who">Google review · <span>Hingham</span></figcaption>
+      </figure>
+      <figure class="quote reveal">
+        <div class="stars">★★★★★</div>
+        <p>Such super-kind, helpful folks. I only bring my most treasured pieces here — and there's always something lovely to admire while you wait.</p>
+        <figcaption class="who">Stef W. · <span>Google review</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="rev-badges reveal">
+      <span class="rev-badge"><b>A+</b> BBB Accredited since 1993</span>
+      <span class="rev-badge">South Shore Magazine <b>★</b> Award</span>
+      <span class="rev-badge">Readers' Choice Winner</span>
+    </div>
+
+    <div class="rev-cta reveal">
+      <a class="btn btn-ink" href="https://www.google.com/search?q=The+Whitney+Gordon%27s+Jewelers+Hingham+reviews" target="_blank" rel="noopener">Read all 64 reviews on Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VISIT ===== -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <span class="eyebrow">Find Us</span>
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,2.9rem);margin:.3em 0 0">In the heart of<br>Hingham Square</h2>
+        <dl>
+          <div class="row"><dt>Address</dt><dd><a href="https://maps.google.com/?q=39+Main+Street+Hingham+MA+02043" target="_blank" rel="noopener">39 Main Street<br>Hingham, MA 02043</a></dd></div>
+          <div class="row"><dt>Hours</dt><dd>Tuesday–Friday · 9:00–5:30<br>Saturday · 9:00–5:00<br><span class="closed">Closed Sunday &amp; Monday</span></dd></div>
+          <div class="row"><dt>Phone</dt><dd><a href="tel:+17817490690">781·749·0690</a></dd></div>
+          <div class="row"><dt>Email</dt><dd><a href="mailto:whitneygordonsjewelers@gmail.com">whitneygordonsjewelers@gmail.com</a></dd></div>
+        </dl>
+        <div class="visit-actions">
+          <a class="btn btn-ink" href="tel:+17817490690">Call the shop</a>
+          <a class="btn btn-line" href="https://maps.google.com/?q=39+Main+Street+Hingham+MA+02043" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <div class="visit-map reveal">
+        <iframe title="Map to Whitney Gordon's Jewelers" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.735409193985!2d-70.89092498416329!3d42.241465379195105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e361494f77c1d9%3A0xc6de945798dacbae!2sThe%20Whitney%20Gordon's%20Jewelers!5e0!3m2!1sen!2sus!4v1606610027840"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="wordmark"><b>Whitney Gordon's</b><small>Jewelers · Est. 1950</small></span>
+        <p>A family-owned jeweler serving Hingham and the South Shore since 1950. Big things come in small stores.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#services">Repair &amp; Custom</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Stay in touch</h5>
+        <ul>
+          <li><a href="tel:+17817490690">781·749·0690</a></li>
+          <li><a href="mailto:whitneygordonsjewelers@gmail.com">Email the shop</a></li>
+        </ul>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/whitneygordonsjewelers/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.1 3.3c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-3.3s0-2.1-.1-3.3c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.3-8.3a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/Whitney-Gordons-Jewelers-142034569184370" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M14 13.5h2.5l.5-3H14v-2c0-.9.2-1.5 1.5-1.5H17V4.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9v2.1H8.5v3H11V21h3v-7.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Whitney Gordon's Jewelers · 39 Main Street, Hingham, MA</span>
+      <span>Downtown Hingham since 1950</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Nav scroll state
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  }, {passive:true});
+
+  // Mobile menu
+  var toggle = document.getElementById('navToggle');
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav-links a, .nav-cta').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+  });
+
+  // Pinned hero — depth parallax: planes move at different speeds as you scroll
+  (function(){
+    var track = document.getElementById('top');
+    if (!track) return;
+    var bg    = document.getElementById('heroBg'),
+        glow  = document.getElementById('heroGlow'),
+        scrim = document.getElementById('heroScrim'),
+        frame = document.getElementById('heroFrame'),
+        copy  = document.getElementById('heroCopy'),
+        trust = document.getElementById('heroTrust'),
+        hint  = document.getElementById('heroHint');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var clamp = function(v){ return v < 0 ? 0 : v > 1 ? 1 : v; };
+
+    if (reduce) return;
+
+    var ticking = false, lastP = -1;
+    function apply(p){
+      bg.style.transform    = 'scale(' + (1 + p * 0.12) + ') translateY(' + (p * -6) + '%)';
+      glow.style.transform  = 'translateY(' + (p * 16) + '%) translateX(' + (p * -3) + '%)';
+      frame.style.transform = 'translateY(' + (p * -34) + 'px)';
+      var f = clamp((p - 0.42) / 0.40);
+      copy.style.transform  = 'translateY(' + (p * -120) + 'px)';
+      copy.style.opacity    = (1 - f).toFixed(3);
+      copy.style.pointerEvents = f > 0.8 ? 'none' : 'auto';
+      scrim.style.opacity   = (clamp(p * 1.2) * 0.5).toFixed(3);
+      var tf = clamp((p - 0.78) / 0.22);
+      trust.style.opacity   = tf.toFixed(3);
+      trust.style.transform = 'translateY(' + ((1 - tf) * 100) + '%)';
+      if (hint) hint.style.opacity = clamp(1 - p / 0.07).toFixed(3);
+    }
+    function compute(){
+      var total = track.offsetHeight - window.innerHeight;
+      var scrolled = Math.min(Math.max(-track.getBoundingClientRect().top, 0), total);
+      var p = total > 0 ? scrolled / total : 0;
+      if (p !== lastP){ apply(p); lastP = p; }
+      ticking = false;
+    }
+    function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(compute); } }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    apply(0); compute();
+  })();
+
+  // Then & Now — pinned crossfade: the image morphs in place while the stage holds
+  (function(){
+    var track = document.getElementById('thennow');
+    if (!track) return;
+    var nw  = document.getElementById('tnNew'),
+        old = document.getElementById('tnOld'),
+        dot = document.getElementById('tnDot'),
+        yOld = document.getElementById('tnYearOld'),
+        yNew = document.getElementById('tnYearNew');
+    var clamp = function(v){ return v < 0 ? 0 : v > 1 ? 1 : v; };
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      if (nw) nw.style.opacity = 1; if (dot) dot.style.left = '100%';
+      if (yOld) yOld.style.opacity = .4; if (yNew) yNew.style.opacity = 1;
+      return;
+    }
+    var ticking = false, lastP = -1;
+    function apply(p){
+      var f = clamp((p - 0.12) / 0.56);          // crossfade, then hold "today"
+      nw.style.opacity = f.toFixed(3);
+      old.style.transform = 'scale(' + (1.04 + p*0.05) + ')';
+      nw.style.transform  = 'scale(' + (1.08 + p*0.05) + ')';
+      if (dot) dot.style.left = (f*100) + '%';
+      if (yOld) yOld.style.opacity = (1 - f*0.6).toFixed(2);
+      if (yNew) yNew.style.opacity = (0.4 + f*0.6).toFixed(2);
+    }
+    function compute(){
+      var total = track.offsetHeight - window.innerHeight;
+      var scrolled = Math.min(Math.max(-track.getBoundingClientRect().top, 0), total);
+      var p = total > 0 ? scrolled / total : 0;
+      if (p !== lastP){ apply(p); lastP = p; }
+      ticking = false;
+    }
+    function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(compute); } }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll);
+    apply(0); compute();
+  })();
+
+  // Image frames: drop the placeholder label only when the real image loads
+  document.querySelectorAll('.frame img').forEach(function(img){
+    function ok(){ img.closest('.frame').classList.add('has-img'); }
+    if (img.complete && img.naturalWidth > 0) ok();
+    img.addEventListener('load', ok);
+    img.addEventListener('error', function(){ img.style.display='none'; });
+  });
+
+  // Scroll reveal
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
