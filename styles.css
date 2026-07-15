@@ -385,6 +385,8 @@
   .foot-social a:hover svg{fill:var(--ink)}
   .foot-social svg{width:17px;height:17px;fill:var(--bone)}
   .foot-bottom{margin-top:50px;padding-top:24px;border-top:1px solid rgba(168,133,78,.22);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.78rem;letter-spacing:.03em}
+  .foot-credit a{color:rgba(247,243,234,.55);transition:color .2s}
+  .foot-credit a:hover{color:var(--gold-bright)}
   @media (max-width:760px){.foot-grid{grid-template-columns:1fr;gap:36px}}
 
   /* ======================= THEN & NOW (pinned crossfade) ======================= */
